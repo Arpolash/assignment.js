@@ -17,26 +17,29 @@
         var totalNumber = chairNumber + tableNumber + bedNumber ;
         return totalNumber;
     }
-                var totalWoodNumber = woodCalculator(5,3,1);
-                console.log(totalWoodNumber + " cubic feet.");
+                // var totalWoodNumber = woodCalculator(5,3,1);
+                // console.log(totalWoodNumber + " cubic feet.");
 
 //--3---brickCalculator--problem.
 
-function brickCalculator(number){
-    var  oneFloor = 1000;
-     if(brickCalculator.length <= 10){
-         return number * oneFloor * 15; 
-     }
-     else if ((brickCalculator.length > 10) && (brickCalculator.length <=20)){
-         return  number * oneFloor * 12;
-     }
-     else{
-         return  number * oneFloor * 10;
-     }
 
- }
-        // var totalBrick = brickCalculator(50);
-        // console.log(totalBrick + ' brick.');
+function brickCalculator (floorNumber){
+    if(floorNumber <= 10){
+        firstTenFloor = floorNumber;
+        return firstTenFloor * 15 * 1000 ;
+    }else if ((floorNumber > 10) && (floorNumber <= 20)){
+        firstTenFloor = 10;
+        tenToTwentyFloor = floorNumber - firstTenFloor;
+        return ((firstTenFloor * 15 * 1000) + (tenToTwentyFloor * 12 * 1000));
+    }else if (floorNumber > 20){
+        firstTenFloor = 10;
+        tweentyToMore = floorNumber - 20;
+        return ((firstTenFloor * 15 * 1000) + (firstTenFloor * 12 * 1000) + (tweentyToMore * 10 * 1000))
+    }
+}
+                // console.log(brickCalculator(9));
+
+
 
 //--4---tinyFriend--problem.
       function tinyFriend(name){  
