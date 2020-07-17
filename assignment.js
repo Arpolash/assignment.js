@@ -11,14 +11,14 @@
 //-2---woodCalculator--problem.
 
    function woodCalculator(chair,table,bed){
-        var chairNumber = chair * 1 ;
+        var chairNumber = chair * 1 ; // 1,3,5 means 1,3,5 cubic feet wood.
         var tableNumber = table * 3 ;
         var bedNumber = bed * 5 ;
         var totalNumber = chairNumber + tableNumber + bedNumber ;
         return totalNumber;
     }
-                // var totalWoodNumber = woodCalculator(5,3,1);
-                // console.log(totalWoodNumber);
+                var totalWoodNumber = woodCalculator(5,3,1);
+                console.log(totalWoodNumber + " cubic feet.");
 
 //--3---brickCalculator--problem.
 
